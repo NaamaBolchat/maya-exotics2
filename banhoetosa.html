@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Maya Exóticos</title>
+
+</head>
+
+
+
+<body class="pagina-interna" data-page="banhoetosa">
+
+    <header>
+
+        <h1>O cuidado essencial</h1>
+
+    </header>
+
+    <main>
+
+        <form>
+
+            <section id="qual-pet-banhoetosa">
+
+                <fieldset>
+
+                    <legend>Para qual Pet é o serviço?</legend>
+
+                    <div>
+
+                        <input type="radio" id="pet-cahorro1" name="pet-cahorro1" value="pet-cahorro1">
+
+                        <label for="pet-cahorro1">Bob</label>
+
+                    </div>
+
+                    <div>
+
+                        <input type="radio" id="pet-cahorro2" name="pet-cahorro2" value="pet-cahorro2">
+
+                        <label for="pet-cahorro2">Alissa</label>
+
+                    </div>
+
+                </fieldset><br>
+
+            </section>
+
+            <section>
+
+                <fieldset>
+
+                    <legend>Dia e hora:</legend>
+
+                    <div>
+
+                        <input type="date" id="dia-banhoetosa" name="dia-banhoetosa">
+
+                    </div><br>
+
+                    <div>
+
+                        <select id="hora" name="hora">
+
+                            <option value="">Selecione um horário para o serviço</option>
+
+                            <option value="11:00">11:00</option>
+
+                            <option value="14:00">14:00</option>
+
+                            <option value="15:30">15:30</option>
+
+                            <option value="17:00">17:00</option>
+
+                            <option value="18:30">18:30</option>
+
+                        </select>
+
+                    </div>
+
+                </fieldset><br>
+
+            </section>
+
+            <section>
+
+                <fieldset>
+
+                    <legend>Telebusca?</legend>
+
+                    <div>
+
+                        <select id="telebuscasimounao" name="telebuscasimounao">
+
+                            <option value="">Selecione</option>
+
+                            <option value="sim">Sim</option>
+
+                            <option value="nao">Não</option>
+
+                        </select>
+
+                    </div>
+
+                </fieldset><br>
+
+            </section>
+
+            <section id="sim-telebusca">
+
+                <fieldset>
+
+                    <legend>Selecione o endereço</legend>
+
+                    <div>
+
+                        <input type="radio" id="endereco-telebusca" name="endereco-telebusca">
+
+                        <label for="endereco-telebusca">R. Aldo Maligol<br>1276, bloco 3<br>Apt 420</label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>O responsável pelo Pet o receberá de volta?</legend>
+
+                    <select id="quem-recebera" name="quem-recebera-pet" required>
+
+                        <option value="">Selecione</option>
+
+                        <option value="sim">Sim</option>
+
+                        <option value="nao">Não</option>
+
+                    </select>
+
+                    <legend>Caso a pessoa à receber o Pet não seja o responsável, digite abaixo o nome e número de contato da pessoa</legend>
+
+                    <input type="text" id="nome-pessoa-receber" name="quem-recebera-pet" placeholder="Ex.: João, Maria...">
+
+                    <input type="tel" id="numero-pessoa-receber" name="quem-recebera-pet" placeholder="Ex.: 21 954887511">
+
+                </fieldset>
+
+            </section>
+
+            <section>
+
+                <fieldset>
+
+                    <legend>É a primeira vez deste Pet?</legend>
+
+                    <select id="primeiravez-pet" name="primeiravez-pet" required>
+
+                        <option value="">Selecione</option>
+
+                        <option value="sim">Sim</option>
+
+                        <option value="Nao">Não</option>
+
+                    </select>
+
+                </fieldset>
+
+            </section>
+
+            <section>
+
+                <h3>Pagamento</h3>
+
+                <fieldset>
+
+                    <div>
+
+                        <input type="radio" id="pix" name="pgto" value="pix" required>
+
+                        <label for="pix">Pix</label>
+
+                        <input type="radio" id="cartao-credito" name="pgto" value="credito">
+
+                        <label for="cartao-credito">Cartão Crédito</label>
+
+                        <input type="radio" id="carta-debito" name="pgto" value="debito">
+
+                        <label for="carta-debito">Cartão Débito</label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="pgto-pix">
+
+                    <legend>Pix</legend>
+
+                    <p>Copie e cole o código pix no seu app do banco:</p>
+
+                    <input type="text" id="codigo-pix" name="codigo-pix" readonly value="00020126580014BR.GOV.BCB.PIX0136123e4567-e89b-12d3-a456-4266141740005204000053039865802BR5913MAYA EXOTICOS6009SAO PAULO62070503***6304ABCD">
+
+                    <button type="button" id="copiar-codigo-pix">Copiar</button>
+
+                </fieldset>
+
+                <fieldset id="pgto-credito">
+
+                    <legend>Cartão de Crédito</legend>
+
+                    <div>
+
+                        <label for="numero-cartao-credito">Número do Cartão:</label><br>
+
+                        <input type="text" id="numero-cartao-credito" name="numero-cartao-credito" placeholder="Ex.: 0000 0000 0000 0000" required>
+
+                    </div>
+
+                    <div>
+
+                        <label for="validadeano-cartao-credito">Válidade:</label><br>
+
+                        <input type="number" id="validadeano-cartao-credito" name="validade-cartao-credito" maxlength="4" placeholder="Ano">
+
+                        <input type="number" id="validademes-cartao-credito" name="validade-cartao-credito" maxlength="2" placeholder="Mês">
+
+                    </div>
+
+                    <div>
+
+                        <label for="codigo-cartao-credito">CVV</label><br>
+
+                        <input type="number" id="codigo-cartao-credito" name="codigo-cvv-credito" maxlength="3" placeholder="Ex.: 725">
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="pgto-debito">
+
+                    <legend>Cartão de Débito</legend>
+
+                    <div>
+
+                        <label for="numero-cartao-debito">Número do Cartão:</label><br>
+
+                        <input type="number" id="numero-cartao-debito" name="numero-cartao-debito" maxlength="16" placeholder="Ex.: 0000 0000 0000 0000" required>
+
+                    </div>
+
+                    <div>
+
+                        <label for="validade-cartao-debito">Validade:</label><br>
+
+                        <input type="number" id="validadeano-cartao-debito" name="validade-cartao-debito" maxlength="4" placeholder="Ano">
+
+                        <input type="number" id="validademes-cartao-debito" name="validade-cartao-debito" maxlength="2" placeholder="Mês">
+
+                    </div>
+
+                    <div>
+
+                        <label for="codigo-cartao-debito">CVV</label><br>
+
+                        <input type="text" id="codigo-cartao-debito" name="codigo-cvv-debito" maxlength="3" placeholder="Ex.: 564">
+
+                    </div>
+
+                </fieldset>
+
+            </section>
+
+            <button type="submit">Solicitar</button>
+
+        </form>
+        <script src="scripts.js"></script>
+
+    </main>
+
+    <footer>
+
+        <h6>Site desenvolvido por Naama Bolchat, 2026. Rio de Janeiro, RJ.</h6>
+
+    </footer>
+
+
+
+</body>
+
+
+
+</html>
+
+

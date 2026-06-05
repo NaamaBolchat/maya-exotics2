@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: rgb(245, 245, 200);
+    color: rgb(7, 39, 0);
+    font-size: 20px;
+    background: #f5ebb5;
+    background: linear-gradient(349deg, rgba(245, 235, 181, 1) 0%, rgba(255, 239, 207, 0.57) 89%, rgba(56, 89, 43, 1) 100%);
+    background-attachment: scroll;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.logo-maya {
+    font-family: "Roboto Serif", serif;
+    font-size: x-large;
+    font-weight: 450;
+    color: rgb(7, 39, 0);
+    text-shadow: 0 0 5px rgb(15, 15, 0);
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 2px 0;
+}
+
+header nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgba(56, 89, 43, 0.8);
+    transition: width 0.75s;
+}
+
+header nav ul li:hover::after {
+    width: 80px;
+}
+
+header nav a,
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav a:visited,
+a:visited {
+    color: inherit;
+}
+
+.carousel-wrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-wrapper::before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56, 89, 43, 0.8) 0%, rgba(56, 89, 43, 0) 70%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(60px);
+    z-index: 1;
+    animation: pulsar 2s infinite alternate;
+}
+
+.carousel-wrapper .carousel-inner {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-wrapper .carousel-item {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.carousel-wrapper .carousel-item.active {
+    display: flex;
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(56, 89, 43, 0.35);
+    border-radius: 50%;
+    border: none;
+    opacity: 1;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: rgba(56, 89, 43, 1);
+}
+
+@keyframes pulsar {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.itens-carrossel {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-wrapper .carousel-item {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-wrapper .carousel-item.active {
+    display: flex;
+}
+
+.img-produtos {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.img-produtos img {
+    max-width: 80%;
+    max-height: 60%;
+}
+
+.conteudo {
+    width: 50%;
+    padding-right: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.tag-produto {
+    font-size: medium;
+    text-transform: uppercase;
+    color: rgb(15, 15, 0);
+    font-weight: 450;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.nome-produto {
+    font-size: xx-large;
+    font-family: "Roboto Serif", serif;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.descricao-produto {
+    font-size: medium;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.btao {
+    padding: 4px 2px;
+    background: linear-gradient(90deg, rgba(56, 89, 43, 0.8));
+    border-radius: 8px;
+    color: #000;
+    font-size: xx-small;
+    font-weight: 450;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.8s ease;
+    transform-origin: center;
+}
+
+.btao:hover {
+    transform: scale(1.5);
+}
+
+.arrows {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.arrow-btao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(245, 235, 181, 1);
+    border: 2px solid rgba(56, 89, 43, 0.8);
+}
+
+.arrow-btao:hover {
+    background-color: rgba(56, 89, 43, 0.8);
+    border-color: rgba(245, 235, 181, 1);
+}
+
+.animalprints-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.animalprints{
+    position: absolute;
+    border: none;
+}
+#animalprint{
+    position: absolute;
+    width: 4%;
+    height: auto;
+    top: 40px;
+    left: 9%;
+}
+#animalprint img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    opacity:89%;
+}
+.secao {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.secao h2 {
+    font-family: "Roboto Serif", serif;
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.secao p {
+    font-size: medium;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pagina-interna {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-interna header h1,
+.pagina-interna header h2 {
+    font-family: "Roboto Serif", serif;
+    text-align: center;
+}
+
+.pagina-interna nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagina-interna footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+}
+
+.pagina-interna main section {
+    text-align: center;
+}
+
+/* Estilos de servicos.html */
+#cuidados {
+    margin-top: 100px;
+}
+
+#vet,
+#hotel,
+#planos {
+    margin-top: 50px;
+}
+
+#titulo-vet {
+    margin-left: 3px;
+}
+
+/* Estilos de banhoetosa.html */
+body[data-page="banhoetosa"] main {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+body[data-page="banhoetosa"] section {
+    margin-bottom: 25px;
+}
+
+body[data-page="banhoetosa"] fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+body[data-page="banhoetosa"] fieldset div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+body[data-page="banhoetosa"] legend {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#sim-telebusca,
+#pgto-pix,
+#pgto-credito,
+#pgto-debito {
+    display: none;
+}
+
+/* Estilos de cadastro.html */
+body[data-page="cadastro"] .form-login {
+    text-align: center;
+}
+
+body[data-page="cadastro"] footer {
+    margin-top: 120px;
+}
+
+body[data-page="cadastro"] legend {
+    margin-left: 10px;
+}
+
+body[data-page="cadastro"] #secao-idadepet {
+    margin-top: 25px;
+}
+
+body[data-page="cadastro"] .obrigatorio,
+body[data-page="cadastro"] input {
+    border-color: rgb(158, 158, 158);
+}
+
+/* Estilos de contato.html */
+body[data-page="contato"] nav ul {
+    margin-top: 50px;
+}
+
+body[data-page="contato"] #email {
+    margin-top: 50px;
+}
+
+body[data-page="contato"] #numero {
+    margin-top: 25px;
+}
+
+body[data-page="contato"] #telefone-1 {
+    margin-top: 20px;
+}
+
+body[data-page="contato"] #contato {
+    margin-top: 50px;
+}
+
+/* Estilos de pgto-*.html */
+body[data-page="pgto-mayaplus"] main,
+body[data-page="pgto-mayasafron"] main,
+body[data-page="pgto-mayaselect"] main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Estilos de termosecondicoes.html */
+body[data-page="termosecondicoes"] main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+body[data-page="termosecondicoes"] main p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+body[data-page="termosecondicoes"] main h2 {
+    font-family: "Roboto Serif", serif;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+body[data-page="termosecondicoes"] main > a {
+    display: inline-block;
+    margin-top: 24px;
+}
+
+/* Estilos de produtos.html */
+body[data-page="produtos"] #alimentacao {
+    margin-top: 100px;
+}
+
+body[data-page="produtos"] #habitat,
+body[data-page="produtos"] #acessorios {
+    margin-top: 100px;
+}
+
+body[data-page="produtos"] #titulo-ratos,
+body[data-page="produtos"] #titulo-cubos,
+body[data-page="produtos"] #titulo-pedra,
+body[data-page="produtos"] #titulo-terrario,
+body[data-page="produtos"] #titulo-colete,
+body[data-page="produtos"] #titulo-protetor {
+    margin-top: 50px;
+}
+
+body[data-page="produtos"] footer {
+    margin-top: 120px;
+}
+
+/* Estilos de cuidado-reptil.html */
+body[data-page="cuidado-reptil"] main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+body[data-page="cuidado-reptil"] main p {
+    max-width: 700px;
+    margin: 0 auto 16px;
+    line-height: 1.6;
+}
+
+/* Estilos de cuidados-pet.html */
+body[data-page="cuidados-pet"] main section {
+    margin-top: 50px;
+}
+
+/* Estilos de esquecisenha.html */
+body[data-page="esquecisenha"] form {
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Estilos de login.html */
+body[data-page="login"] h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+body[data-page="login"] form {
+    text-align: center;
+    margin-top: 75px;
+}
+
+/* Estilos de planos.html */
+body[data-page="planos"] h1 {
+    margin-top: 25px;
+}

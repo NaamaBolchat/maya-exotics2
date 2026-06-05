@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Maya Exóticos</title>
+
+</head>
+
+
+
+<body class="pagina-interna" data-page="cadastro">
+
+    <header>
+
+        <h2 style="text-align: center;">Cadastre-se</h2><br>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <form action="login.html" method="get" class="form-login">
+
+                <label for="nome">Nome</label><br>
+
+                <input type="text" id="nome" name="nome" placeholder="Ex.: Regina dos Santos" required><br><br>
+
+                <label for="email">E-mail</label><br>
+
+                <input type="email" id="email" name="email" placeholder="Ex.: regina.santos@gmail.com" required><br><br>
+
+                <label for="telefone">Telefone</label><br>
+
+                <input type="tel" id="telefone" name="telefone" placeholder="Ex.: 21964867822" required><br><br>
+
+                <h3>Endereço</h3>
+
+                <label for="rua">Rua</label><br>
+
+                <input type="text" id="rua" name="rua" placeholder="Ex.: Rua Alberto Paineiras..." required><br><br>
+
+                <label for="numero-casa">Nº da casa</label><br>
+
+                <input type="number" id="numero-casa" name="numero-casa" placeholder="Ex.: 304" required><br><br>
+
+                <label for="bairo">Bairro</label><br>
+
+                <input type="text" id="bairro" name="bairro" placeholder="Ex.: Bairro da Boa Esperança" required><br>
+
+                <h3>Pet</h3>
+
+                <label for="nome-pet">Nome</label><br>
+
+                <input class="obrigatorio" type="text" id="nome-pet" name="nome-pet" placeholder="Ex.: Tuco" required><br><br>
+
+                <label for="raca-pet">Raça do pet</label><br>
+
+                <input class="obrigatorio" type="text" id="raca-pet" name="raca-pet" placeholder="Ex.: Chihuahua" required><br><br>
+
+                <fieldset id="pelo-pet">
+
+                    <legend>Pelo do Pet</legend>
+
+                    <div>
+
+                        <input type="radio" id="pelo-pet-curto" name="pelo-pet" required>
+
+                        <label for="pelo-pet-curto">Curto</label>
+
+                    </div>
+
+                    <div>
+
+                        <input type="radio" id="pelo-pet-longo" name="pelo-pet">
+
+                        <label for="pelo-pet-longo">Longo</label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Porte do Pet</legend>
+
+                    <div>
+
+                        <input type="radio" id="porte-pet-pequeno" name="porte-pet" required>
+
+                        <label for="porte-pet-pequeno">Pequeno</label>
+
+                    </div>
+
+                    <div>
+
+                        <input type="radio" id="porte-pet-medio" name="porte-pet">
+
+                        <label for="porte-pet-medio">Médio</label>
+
+                    </div>
+
+                    <div>
+
+                        <input type="radio" id="porte-pet-grande" name="porte-pet">
+
+                        <label for="porte-pet-grande">Grande</label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Sexo do pet</legend>
+
+                    <div>
+
+                        <input type="radio" id="sexo-pet-mas" name="sexo-pet" value="macho" required><br>
+
+                        <label for="sexo-pet-mas">Macho</label>
+
+                    </div>
+
+                    <div>
+
+                        <input type="radio" id="sexo-pet-fem" name="sexo-pet" value="femea"><br>
+
+                        <label for="sexo-pet-fem">Fêmea</label>
+
+                    </div>
+
+                </fieldset>
+
+                <section id="secao-idadepet">
+
+                    <label for="idade-pet">Nascimento do Pet</label><br><br>
+
+                    <input type="date" id="idade-pet" name="idade-pet" required><br>
+
+                </section>
+
+                <section>
+
+                    <fieldset>
+
+                        <legend>Vacinas do Pet em dia?</legend>
+
+                        <select id="vacina-pet" name="vacina-pet" style="margin-left: 20px;" required>
+
+                            <option value="">Selecione</option>
+
+                            <option value="sim">Sim</option>
+
+                            <option value="nao">Não</option>
+
+                        </select>
+
+                    </fieldset>
+
+                </section>
+
+                <section>
+
+                    <fieldset>
+
+                        <legend>Observações sobre o Pet</legend>
+
+                        <input type="text" id="observacao-pet" name="observacoes" style="margin-left: 20px;">
+
+                    </fieldset>
+
+                </section>
+
+                <section>
+
+                    <label for="senha">Crie uma senha com até 8 caracteres</label><br><br>
+
+                    <input type="password" id="senha" name="senha" minlength="8" required><br><br>
+
+                </section>
+
+                <section>
+
+                    <input type="checkbox" id="temos-e-condicoes" name="termos-e-condicoes" required>
+
+                    <label for="temos-e-condicoes">Aceito os <a href="termosecondicoes.html"><button class="btao" type="button">Termos e condições</button></a></label><br><br>
+
+                    <button type="submit">Cadastrar</button>
+
+                </section>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <h6>Site desenvolvido por Naama Bolchat, 2026. Rio de Janeiro, RJ.</h6>
+
+    </footer>
+
+
+
+</body>
+
+
+
+</html>
+
+
