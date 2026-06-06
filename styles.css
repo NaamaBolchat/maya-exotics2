@@ -24,6 +24,11 @@ header {
     align-items: center;
     z-index: 3;
 }
+footer {
+
+            margin-top: 170px;
+
+}
 
 .logo-maya {
     font-family: "Roboto Serif", serif;
